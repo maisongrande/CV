@@ -20,7 +20,7 @@ Opt args:
         target: Base directory from where to operate.
         folders: Each parent directory shall have [0, folders] child directoies.
         files:  Each directory shall contain [0, files]. Files speciefied by user.
-    
+
     optional:
         size: Number of characters written to file [1, size * 1024]
         rec_depth:  Decides length of folder tree.
@@ -31,24 +31,24 @@ Opt args:
 '''
 # Non optional arguments:
 parser.add_argument('target', type = str,
-                    help='Define base folder from where the file tree will grow.')
+        help='Define base folder from where the file tree will grow.')
 parser.add_argument('folders', type = int,
-                    help='Define number of sub folders in each directory.')
+        help='Define number of sub folders in each directory.')
 parser.add_argument('files', type = int,
-                    help='Define number of files in each directory and sub directory.')
+        help='Define number of files in each directory and sub directory.')
 # Optional arguments:
 parser.add_argument('--size', nargs=1, type = int, default=0,
-                    help='Defines number of characters in file times 1024')
+        help='Defines number of characters in file times 1024')
 parser.add_argument('--rec_depth', type = int,  nargs=1, default=3,
-                    help='Defines how deep the folders will accumulate')
+        help='Defines how deep the folders will accumulate')
 parser.add_argument('--start', type = int,  nargs=1, default=1,
-                    help = 'Lower boundry for timestamp')
+        help = 'Lower boundry for timestamp')
 parser.add_argument('--end', type = int,  nargs=1, default=1,
-                    help='Upper boundry for timestamp')
+        help='Upper boundry for timestamp')
 parser.add_argument('--seed', type = int,  nargs=1, default=1,
-                    help='Reproduces same result the next time script is executed')
+        help='Reproduces same result the next time script is executed')
 parser.add_argument('--verbose', action='store_true',
-                    help='Makes script very talkative')
+        help='Makes script very talkative')
 
 args = parser.parse_args()
 
@@ -135,7 +135,7 @@ numfiles: int
     if not os.path.exists(base): # if that directory does not excist
         os.mkdir(base)          # Make it
     os.chdir(base)  # Change into it
-   
+
     # Make a list of dir names for first branch. 
     sub_d = [random_string(rdint(2,22)) for i in range(rec_d)] 
 
@@ -175,7 +175,7 @@ what was intended? It would have made a pretty nice file-bush though.
 /base/def/rgw       then base/klm/      then /base/sdf
     \    \ /gwg
      \
-      \     //sfa
+             \     //sfa
         def/ghi/
             \/sfd
 '''
@@ -222,7 +222,7 @@ def file_content(filename, file_sz=size):
     or randomly generated.
     """
     rand_file = open(filename, "w")     # Open file then check if:
-    
+
     if file_sz == 0:                    # No filesize provided?
         rndtxtsz = rdint(1, 1024)           # Get size between 1-1024 bytes
         txt = random_string(rndtxtsz)       # Get string of rand size

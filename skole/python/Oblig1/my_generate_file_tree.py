@@ -106,7 +106,7 @@ if __name__ == "__main__":
     if l < 4:
         print "Not enough arguments included."
         print "usage: %s target dirs files " % sys.argv[0] +\
-            "[size rec_depth start end seed verbose]"
+                "[size rec_depth start end seed verbose]"
         sys.exit(0)
 
     target = sys.argv[1]
