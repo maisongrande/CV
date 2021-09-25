@@ -17,11 +17,11 @@ FOUND=0				# Which file are they found in.
 
 # Check that needed info is supplied:
 if [ $# -ne $NEED_ARGS ]
-# Test wether command-line argument is present (non-empty).
+    # Test wether command-line argument is present (non-empty).
 then
-echo "INFO: ${FNAME##/} Find all files containg a specific word " 	# Print info
-echo "USAGE: ${FNAME} [Base Dir] [Key Word]" 						# Print usage.		
-exit $ERROR															# then exit.
+    echo "INFO: ${FNAME##/} Find all files containg a specific word " 	# Print info
+    echo "USAGE: ${FNAME} [Base Dir] [Key Word]" 						# Print usage.		
+    exit $ERROR															# then exit.
 fi	
 
 # SEARCH and STORE: Run command 'find' from basedir. Look for -type files
@@ -40,12 +40,12 @@ FOUNDNUM=$(echo -n "$FOUND" | wc -l)	# echo result into wc to count num lines wi
 # If more than zero files where found, display files.
 if [ $FOUNDNUM -gt '0' ]
 then
-	# Display number of matches to the user:
-	echo "Found "$FOUNDNUM" files containing "$KEYWORD": "
-	echo
-	echo "$FOUND"
+    # Display number of matches to the user:
+    echo "Found "$FOUNDNUM" files containing "$KEYWORD": "
+    echo
+    echo "$FOUND"
 else
-	echo "No files containing "$KEYWORD" found."
+    echo "No files containing "$KEYWORD" found."
 fi
 
 ##Exit
