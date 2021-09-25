@@ -7,14 +7,14 @@
 
 ROOT_UID=0          # User ID for root on *UX computers. (find your id by: >>id 'username' and change it accordingly if on uio machine) 
 ERR_NOTROOT=87      # Return number for non root invoking.
-ERROR=1				# Return number if something went wrong.
-ALLGOOD=0			# Return number if all went well.
-ROOTDIR=$1			# Directory from where the search start.
-FILESIZE=$2			# User want files larger than this removed.
-FILECOUNT=0			# How many files where found?
-FNAME=$0			# Script name.
-NEED_ARGS=2			# Number of needed arguments to execute script.
-FOUND=0				# Number of files found.
+ERROR=1             # Return number if something went wrong.
+ALLGOOD=0           # Return number if all went well.
+ROOTDIR=$1          # Directory from where the search start.
+FILESIZE=$2         # User want files larger than this removed.
+FILECOUNT=0         # How many files where found?
+FNAME=$0            # Script name.
+NEED_ARGS=2         # Number of needed arguments to execute script.
+FOUND=0             # Number of files found.
 PERMISSION=644      # Permission criteria change accordingly.
 
 # We are potentially removing a great amount of files, might be a good idea to run as root
