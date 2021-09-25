@@ -30,8 +30,8 @@ if [ $# -ne $NEED_ARGS ]
 # Test wether command-line argument is present (non-empty).
 then
 echo "INFO: ${FNAME##/} Delete recursively all files from base dir that are larger than chosen size (in kB)."   # Print info
-echo "USAGE: ${FNAME} [Base Dir] <File Size>"		                                                            # Print usage.		
-exit $ERROR											                                                            # then exit.
+echo "USAGE: ${FNAME} [Base Dir] <File Size>"                                                                   # Print usage.		
+exit $ERROR                                                                                                     # then exit.
 fi	
 
 ## SEARCH FILE TREE FOR FILES LARGER THAN $2, COUNT THEM. 
