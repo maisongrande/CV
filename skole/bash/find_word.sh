@@ -20,8 +20,8 @@ if [ $# -ne $NEED_ARGS ]
     # Test wether command-line argument is present (non-empty).
 then
     echo "INFO: ${FNAME##/} Find all files containg a specific word " 	# Print info
-    echo "USAGE: ${FNAME} [Base Dir] [Key Word]" 						# Print usage.		
-    exit $ERROR															# then exit.
+    echo "USAGE: ${FNAME} [Base Dir] [Key Word]"                        # Print usage.		
+    exit $ERROR	                                                        # then exit.
 fi	
 
 # SEARCH and STORE: Run command 'find' from basedir. Look for -type files
