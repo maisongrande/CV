@@ -19,9 +19,9 @@ SORTED=0
 if [ $# -ne $NEED_ARGS ]
 # Test wether command-line argument is present (non-empty).
 then
-echo "INFO: ${FNAME##/} Lists all files modified the last n-days"	# Print info
-echo "USAGE: ${FNAME} [Base Dir] [Num Days]" 						# Print usage.		
-exit $ERROR															# then exit.
+echo "INFO: ${FNAME##/} Lists all files modified the last n-days"   # Print info
+echo "USAGE: ${FNAME} [Base Dir] [Num Days]"                        # Print usage.		
+exit $ERROR                                                         # then exit.
 fi	
 
 # Not a good idea to use ls-command to list the files. This is because files can
